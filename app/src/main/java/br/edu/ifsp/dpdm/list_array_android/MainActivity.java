@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        edId = findViewById(R.id.edId);
         edRotulo = findViewById(R.id.edRotulo);
         edValor = findViewById(R.id.edValor);
 
@@ -42,12 +41,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void salvar(View v) {
         produto = new Produto();
-        produto.setId(Integer.parseInt(edId.getText().toString()));
         produto.setRotulo(edRotulo.getText().toString());
         produto.setValor(Double.parseDouble(edValor.getText().toString()));
         produtoList.add(produto);
         atualizarLista();
-        limparDados();
+        //limparDados();
         exibirMensagem("Produto cadastrado com sucesso!");
     }
 
@@ -56,9 +54,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void limparDados() {
-        edId.setText(0);
-        edId.requestFocus();
         edRotulo.setText("");
+        edRotulo.requestFocus();
         edValor.setText(0);
     }
 

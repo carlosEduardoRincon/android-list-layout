@@ -21,19 +21,16 @@ public class ProdutoListAdapter extends BaseAdapter {
         this.produtoList = produtoList;
     }
 
-    @Override
     public int getCount() {
-        return 0;
+        return produtoList.size();
     }
 
-    @Override
     public Object getItem(int position) {
-        return null;
+        return produtoList.get(position);
     }
 
-    @Override
     public long getItemId(int position) {
-        return 0;
+        return position;
     }
 
     @Override
@@ -43,12 +40,12 @@ public class ProdutoListAdapter extends BaseAdapter {
         View view = inflater.inflate(R.layout.produtos, null);
 
         TextView id = view.findViewById(R.id.txtIdProduto);
-        id.setText(String.valueOf(p.getId()));
+        id.setText(String.valueOf(++position));
 
         TextView rotulo = view.findViewById(R.id.txtRotulo);
         rotulo.setText(p.getRotulo());
 
-        TextView valor = view.findViewById(R.id.txtLabel);
+        TextView valor = view.findViewById(R.id.txtValor);
         valor.setText(String.valueOf(p.getValor()));
 
         return view;

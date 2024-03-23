@@ -11,10 +11,10 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="14dp"
-        android:text="@string/nome" />
+        android:text="Rótulo: " />
 
     <EditText
-        android:id="@+id/edNome"
+        android:id="@+id/edRotulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
@@ -29,13 +29,13 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/edNome"
-        android:layout_below="@+id/edNome"
+        android:layout_alignLeft="@+id/edRotulo"
+        android:layout_below="@+id/edRotulo"
         android:layout_marginTop="20dp"
-        android:text="@string/idade" />
+        android:text="Valor:" />
 
     <EditText
-        android:id="@+id/edIdade"
+        android:id="@+id/edValor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView2"
@@ -43,43 +43,24 @@
         android:ems="10"
         android:inputType="number" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edIdade"
-        android:layout_alignLeft="@+id/edIdade"
-        android:layout_marginTop="28dp"
-        android:text="@string/sexo" />
-
-    <Spinner
-        android:id="@+id/spSexo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView3"
-        android:layout_alignLeft="@+id/textView3" />
-
     <Button
         android:id="@+id/btnSalvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/spSexo"
-        android:layout_alignRight="@+id/edIdade"
+        android:layout_below="@+id/edValor"
+        android:layout_alignRight="@+id/edValor"
         android:layout_marginTop="30dp"
         android:onClick="salvar"
         android:text="@string/salvar" />
 
     <ListView
-        android:id="@+id/lvPessoas"
+        android:id="@+id/lvProdutos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnSalvar"
-        android:layout_alignLeft="@+id/spSexo"
+        android:layout_alignLeft="@+id/edValor"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true">
-
     </ListView>
-
-
 
 </RelativeLayout>
